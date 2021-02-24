@@ -3,17 +3,15 @@ package fabricas.concretas;
 import fabricas.abstratas.IFabricaDeBichos;
 
 public abstract class GerenciadorFabricas {
-    public IFabricaDeBichos fabricaRio() {
+    public static IFabricaDeBichos fabricaRio() {
         return new FabricaRio();
     }
 
-    public IFabricaDeBichos fabricaSeasons() {
+    public static IFabricaDeBichos fabricaSeasons() {
         return new FabricaSeasons();
     }
 
-    public IFabricaDeBichos fabricaStarWars() {
+    public static IFabricaDeBichos fabricaStarWars() {
         return new FabricaStarWars();
     }
-
-
 }
