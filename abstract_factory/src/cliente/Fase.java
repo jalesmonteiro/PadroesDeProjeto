@@ -1,5 +1,6 @@
 package cliente;
 
+import fabricas.abstratas.IFabricaDeBichos;
 import fabricas.concretas.GerenciadorFabricas;
 import produtos.abstratos.IPassaro;
 import produtos.abstratos.IPorco;
@@ -9,8 +10,13 @@ public class Fase {
     }
 
     public static void main(String[] args) {
-        IPassaro passaro = GerenciadorFabricas.fabricaRio().createPassaro();
-        IPorco porco = GerenciadorFabricas.fabricaRio().createPorco();
+    	IFabricaDeBichos fabrica = GerenciadorFabricas.fabricaRio();
+    	//IFabricaDeBichos fabrica = GerenciadorFabricas.fabricaSeasons();
+    	//IFabricaDeBichos fabrica = GerenciadorFabricas.fabricaStarWars();
+    	
+        IPassaro passaro = fabrica.createPassaro();
+        IPorco porco = fabrica.createPorco();
+        
         int pancadas = 0;
 
         while (porco.estaVivo()) {
