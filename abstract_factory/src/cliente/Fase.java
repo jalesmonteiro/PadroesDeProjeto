@@ -4,7 +4,7 @@ import fabricas.concretas.GerenciadorFabricas;
 import produtos.abstratos.IPassaro;
 import produtos.abstratos.IPorco;
 
-public abstract class Fase {
+public class Fase {
     public Fase() {
     }
 
